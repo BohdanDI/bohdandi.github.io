@@ -1,9 +1,12 @@
-@media (max-width: 1200px)
+@media (max-width: 1199px)
 	.menu
 		&_item 
 			padding-right: 20px
 		&_link 
 			font-size: 13px
+		&_dropdown
+			.language_content
+				transform: translateX(-33%)
 	.promo
 		&_header 
 			font-size: 50px
@@ -47,6 +50,12 @@
 			padding-right: 12px
 		&_link 
 			font-size: 11px
+		&_dropdown
+			.language_content
+				transform: translateX(-33%)
+				a
+					padding: 10px 20px
+					min-width: 50px
 	.subheader
 		&_logo
 			img 
@@ -115,6 +124,8 @@
 			margin: 10px 0
 		&_link 
 			font-size: 20px
+		&_dropdown
+			display: none
 	.hamburger
 		display: block
 		position: absolute
@@ -183,6 +194,10 @@
 			&_item
 				&:hover
 					background-color: #070716
+	.language_mobile
+		display: inline
+		a
+			display: inline				
 
 @media (max-width: 575px)
 	nav 
@@ -245,11 +260,6 @@
 			padding: 5px 0
 		&_link
 			display: block
-		.language
-			.ua
-				display: inline
-			.eng
-				display: inline
 	.hamburger
 		&_active 
 			span 

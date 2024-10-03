@@ -13,9 +13,6 @@ nav
 .hamburger
 	display: none
 
-.language
-	color: #ffffff
-
 .menu
 	display: flex
 	justify-content: space-between
@@ -32,6 +29,36 @@ nav
 	&_item
 		border-right: 2px dotted black
 		padding-right: 26px
+		&:last-child
+			border-right: none
+	&_dropdown
+		display: inline-block
+		.language
+			color: #ffffff
+			text-decoration: none
+			&_content
+				display: none
+				position: absolute
+				background-color: #212121
+				padding-inline-start: 0
+				transform: translateX(-30%)
+				box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5)
+				a
+					display: block
+					text-decoration: none
+					padding: 10px 25px
+					min-width: 75px
+					transition: 0.3s all
+					&:hover
+						background-color: #3c3b3b
+		&:hover
+			.language_content
+				display: block
+.language_mobile
+	display: none
+	a
+		border-right: 2px solid white
+		padding-right: 5px
 		&:last-child
 			border-right: none
 
